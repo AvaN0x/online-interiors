@@ -56,55 +56,49 @@ local blips = {
 	{text = "Aircraft Carrier", color = 0, sprite = 16, x = 3082.31, y = -4717.11, z = 15.26},
 	-- Yacht
 	{text = "Yacht", color = 0, sprite = 455, x = -2043.97, y = -1031.58, z = 11.98},
-	{text = "Yacht", color = 0, sprite = 455, x = -1363.72, y = 6734.10, z = 2.44}
-}
-
-local proximityBlipDistance = 1000.0
-
--- These blips will only be shown when you are nearby
-local proximityBlips = {
+	{text = "Yacht", color = 0, sprite = 455, x = -1363.72, y = 6734.10, z = 2.44},
 	--Gas Stations
-	{text = "Gas Station", color = 0, sprite = 361, x=263.894, y=2606.463, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=1039.958, y=2671.134, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=1207.260, y=2660.175, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=2539.685, y=2594.192, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=2679.858, y=3263.946, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=1687.156, y=4929.392, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=1701.314, y=6416.028, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=179.857, y=6602.839, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=-94.4619, y=6419.594, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=-2554.996, y=2334.40, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=-1800.375, y=803.661, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=-1437.622, y=-276.747, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=-2096.243, y=-320.286, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=-724.619, y=-935.1631, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=-526.019, y=-1211.003, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=-70.2148, y=-1761.792, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=265.648, y=-1261.309, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=819.653, y=-1028.846, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=1208.951, y=-1402.567, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=1181.381, y=-330.847, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=620.843, y=269.100, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=2581.321, y=362.039, z=250.0},
-	{text = "Gas Station", color = 0, sprite = 361, x=2006.9, y=3775.97, z=250.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=263.894, y=2606.463, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=1039.958, y=2671.134, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=1207.260, y=2660.175, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=2539.685, y=2594.192, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=2679.858, y=3263.946, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=1687.156, y=4929.392, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=1701.314, y=6416.028, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=179.857, y=6602.839, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=-94.4619, y=6419.594, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=-2554.996, y=2334.40, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=-1800.375, y=803.661, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=-1437.622, y=-276.747, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=-2096.243, y=-320.286, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=-724.619, y=-935.1631, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=-526.019, y=-1211.003, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=-70.2148, y=-1761.792, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=265.648, y=-1261.309, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=819.653, y=-1028.846, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=1208.951, y=-1402.567, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=1181.381, y=-330.847, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=620.843, y=269.100, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=2581.321, y=362.039, z=250.0, distance = 500.0},
+	{text = "Gas Station", color = 0, sprite = 361, x=2006.9, y=3775.97, z=250.0, distance = 500.0},
 	-- Stores -- 
-	{text = "Store", color = 4, sprite = 59, x=28.88, y=-1351.34, z=250.0},
-	{text = "Store", color = 4, sprite = 59, x=1159.52, y=-326.66, z=250.0},
-	{text = "Store", color = 4, sprite = 59, x=1166.72, y=2707.77, z=250.0},
-	{text = "Store", color = 4, sprite = 59, x=544.59, y=2669.36, z=250.0},
-	{text = "Store", color = 4, sprite = 59, x=1393.16, y=3601.69, z=250.0},
-	{text = "Store", color = 4, sprite = 59, x=-3041.08, y=589.04, z=250.0},
-	{text = "Store", color = 4, sprite = 59, x=-2969.37, y=390.49, z=250.0},
-	{text = "Store", color = 4, sprite = 59, x=1701.39, y=4927.68, z=250.0},
-	{text = "Store", color = 4, sprite = 59, x=-51.51, y=-1755.9, z=250.0},
-	{text = "Store", color = 4, sprite = 59, x=-3240.84, y=1004.61, z=250.0},
-	{text = "Store", color = 4, sprite = 59, x=2681.04, y=3282.96, z=250.0},
-	{text = "Store", color = 4, sprite = 59, x=1965.57, y=3740.15, z=250.0},
-	{text = "Store", color = 4, sprite = 59, x=376.89, y=324.78, z=250.0},
-	{text = "Store", color = 4, sprite = 59, x=2558.23, y=385.5, z=250.0},
-	{text = "Store", color = 4, sprite = 59, x=1141.72, y=-980.74, z=250.0},
-	{text = "Store", color = 4, sprite = 59, x=1730.59, y=6411.09, z=250.0},
-	{text = "Store", color = 4, sprite = 59, x=1997.21, y=3781.99, z=250.0}
+	{text = "Store", color = 4, sprite = 59, x=28.88, y=-1351.34, z=250.0, distance = 1000.0},
+	{text = "Store", color = 4, sprite = 59, x=1159.52, y=-326.66, z=250.0, distance = 1000.0},
+	{text = "Store", color = 4, sprite = 59, x=1166.72, y=2707.77, z=250.0, distance = 1000.0},
+	{text = "Store", color = 4, sprite = 59, x=544.59, y=2669.36, z=250.0, distance = 1000.0},
+	{text = "Store", color = 4, sprite = 59, x=1393.16, y=3601.69, z=250.0, distance = 1000.0},
+	{text = "Store", color = 4, sprite = 59, x=-3041.08, y=589.04, z=250.0, distance = 1000.0},
+	{text = "Store", color = 4, sprite = 59, x=-2969.37, y=390.49, z=250.0, distance = 1000.0},
+	{text = "Store", color = 4, sprite = 59, x=1701.39, y=4927.68, z=250.0, distance = 1000.0},
+	{text = "Store", color = 4, sprite = 59, x=-51.51, y=-1755.9, z=250.0, distance = 1000.0},
+	{text = "Store", color = 4, sprite = 59, x=-3240.84, y=1004.61, z=250.0, distance = 1000.0},
+	{text = "Store", color = 4, sprite = 59, x=2681.04, y=3282.96, z=250.0, distance = 1000.0},
+	{text = "Store", color = 4, sprite = 59, x=1965.57, y=3740.15, z=250.0, distance = 1000.0},
+	{text = "Store", color = 4, sprite = 59, x=376.89, y=324.78, z=250.0, distance = 1000.0},
+	{text = "Store", color = 4, sprite = 59, x=2558.23, y=385.5, z=250.0, distance = 1000.0},
+	{text = "Store", color = 4, sprite = 59, x=1141.72, y=-980.74, z=250.0, distance = 1000.0},
+	{text = "Store", color = 4, sprite = 59, x=1730.59, y=6411.09, z=250.0, distance = 1000.0},
+	{text = "Store", color = 4, sprite = 59, x=1997.21, y=3781.99, z=250.0, distance = 1000.0}
 }
 
 -- Don't edit below this line.
@@ -127,16 +121,18 @@ local function removeBlip(var)
 end
 
 Citizen.CreateThread(function()
-	for i,var in pairs(blips) do
-		addBlip(var)
-	end
-
-	while #proximityBlips > 0 do
+	while true do
 		local playerCoords = GetEntityCoords(PlayerPedId())
 
-		for i,var in pairs(proximityBlips) do
-			local blipCoords = vector3(var.x, var.y, var.z)
-			local isNear = #(playerCoords - blipCoords) <= proximityBlipDistance
+		for i, var in pairs(blips) do
+			local isNear
+
+			if var.distance then
+				local blipCoords = vector3(var.x, var.y, var.z)
+				isNear = #(playerCoords - blipCoords) <= var.distance
+			else
+				isNear = true
+			end
 
 			if isNear and not var.blip then
 				addBlip(var)
